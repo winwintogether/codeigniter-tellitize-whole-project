@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+Rewritebase /123ahs/
+
+RewriteRule ^rewriteme$ rewrote.html
+
+</IfModule>

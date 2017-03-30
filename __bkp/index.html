@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Perception - How Others View You</title>
+
+    <style type="text/css">
+<!--
+.style2 {
+	font-family: monospace, fantasy, cursive, "Levenim MT", "Miriam Fixed", Andalus, "Angsana New", AngsanaUPC, "Arabic Typesetting", Arial;
+	font-weight: bold;
+	color: #CC6600;
+	font-size: 18px;
+}
+-->
+    </style>
+</head>
+<body>
+<div class="modalOverlay" style="display:none"></div>
+<div id="header">
+<link type="text/css" href="http://118.94.177.106:8165//functions/css/home.css" rel="stylesheet" />	
+<style type="text/css">
+.fb-login-button{background:none;}
+</style>
+<div class="modalOverlayHed" style="display:none"></div>
+
+
+<div id="headwrap">
+	<a href="http://118.94.177.106:8165/"><div id="logo">
+	</div></a>
+
+		<div style="position:absolute; margin-left:800px; margin-top:40px; display:" id="name"><div></div>
+<style type="text/css">
+.fb{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#FFFFFF;
+}
+</style>
+<div id="FBauth"></div>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId  : '193323994134869',
+            status : true, // check login status
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml  : true, // parse XFBML
+            //channelUrl : 'http://WWW.MYDOMAIN.COM/channel.html', // channel.html file
+            oauth  : true // enable OAuth 2.0
+        });
+        if (window!=window.top) {
+            FB.Canvas.setAutoResize();
+        };
+        FB.getLoginStatus(function(response) {
+            if (response.authResponse) {
+			
+			        FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                    // query.wait(function(rows) {
+                       //document.getElementById('name').innerHTML = rows[0].name + "<br />" +
+                         //'<img src="' + rows[0].pic_square + '" alt="" />' + "<br />"+rows[0].email;
+						 var stat='loggedout';
+						 if(stat=='loggedin'){
+				        document.getElementById('name').innerHTML = '<img src="' + response.pic_square + '" alt="" />';
+						  }
+						var name=response.name;
+						var email=response.email;
+                     
+                     });
+   // });
+	 var stat='loggedout';
+	  if(stat=='loggedout')
+	  	{
+		FB.logout(function(response) 
+			{
+			  // user is now logged out
+			});
+	 
+          }      // logged in and connected user, someone you know
+
+                // no user session available, someone you dont know
+              /*  var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+				a.setAttribute("class","fb");
+                a.innerHTML="<img src='http://118.94.177.106:8165/images/facebook-icon.png' />";
+                authbox.appendChild(a);*/
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+					FB.api('/me', function(response) {
+                     
+                     	
+					 	//document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var email=response.email;
+						var uid=response.id;
+						var page='';
+						 $.ajax({ 
+						  type: 'POST',                                     
+						  url: 'http://118.94.177.106:8165/ajax/facebook-ajax.php',                        
+						  data: 'email='+email+'&pass='+pic_square+'&name='+name,                        
+						  dataType: 'json',                   
+						  success: function(data)        
+							{
+							document.location.href="http://118.94.177.106:8165/userhome";
+							}           
+						  });
+                     
+                     
+    });
+						
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://118.94.177.106:8165";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+					
+					
+					
+                };
+				
+                //
+            
+            }
+            else {
+                // no user session available, someone you dont know
+                var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+               
+                authbox.appendChild(a);
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://118.94.177.106:8165";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+                };
+                //
+            }
+			
+        });
+ FB.Event.subscribe('auth.login', function () {
+ 		 FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                     //query.wait(function(rows) {
+					// document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var uid=response.id;
+						var email=response.email;
+						var page='';
+						$('<input />').attr({'type':'hidden', 'id':'fbname','value':email}).appendTo('#fbaccess');
+					if(email!='')
+					{
+					//{window.location = "http://118.94.177.106:8165/index.php/signup";}
+
+							$.ajax({ 
+							  type: 'POST',                                     
+							  url: 'http://118.94.177.106:8165/ajax/facebook-ajax.php',                         
+							  data: 'email='+email+'&pass='+uid+'&name='+name,                        
+							  dataType: 'json',                   
+							  success: function(data)        
+								{
+								window.location = "http://118.94.177.106:8165";
+								}           
+							  });
+					 }
+    //});
+    })
+         // window.location = "http://118.94.177.106:8165/index.php/signup";
+      });
+		
+					
+
+
+
+
+        FB.Event.subscribe('auth.logout', function(response) {
+		
+            //top.location.href = "http://facebook.com/shawnsspace.com";
+        });
+    };
+	
+    (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+            '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+    }());
+	
+</script>
+<div id="name1"></div>
+</div>  
+	<div id="rightmain">
+		
+
+		<div class="right-top-main">
+			     
+				  <div id="display_error">
+					<ul style="clear:left;width:300px;overflow:hidden;margin:0px;padding:0px;display:none;float:left"  class= "log_er">
+						<li style="color:#CC0000;padding-left:5px;float:left">Invalid Username or password</li>
+				
+					</ul>
+                     
+				</div>	
+               
+			
+			<form action="http://118.94.177.106:8165/verifylogin" method="post" accept-charset="utf-8" name="login" id="loginForm">			 
+			<div class="right-first">
+			<input class="input" type="text" name="login_username" value="Username" id="loginUsername" style="border:hidden" onKeyPress="loginKeyPress(event);"
+            onFocus="if(this.value  == 'Username') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Username'; } ">
+			</div>
+			<div class="search-second">
+			<input class="input" type="password" name="login_pw" value="Password" id="loginPw" style="border:hidden" onKeyPress="loginKeyPress(event);"
+            onFocus="if(this.value  == 'Password') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Password'; } "/>
+			</div>
+			<div class="login-btn">
+			<a href="#">
+			<div id="login">
+		 
+			<img src="http://118.94.177.106:8165//images/login-btn.png" alt="login-btn" name="log" width="91" height="31" id="log"  onclick="verifyLogin();">			</div>
+			</a>
+			</div>
+            <div class="social_login">
+				<div></div>
+<style type="text/css">
+.fb{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#FFFFFF;
+}
+</style>
+<div id="FBauth"></div>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId  : '193323994134869',
+            status : true, // check login status
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml  : true, // parse XFBML
+            //channelUrl : 'http://WWW.MYDOMAIN.COM/channel.html', // channel.html file
+            oauth  : true // enable OAuth 2.0
+        });
+        if (window!=window.top) {
+            FB.Canvas.setAutoResize();
+        };
+        FB.getLoginStatus(function(response) {
+            if (response.authResponse) {
+			
+			        FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                    // query.wait(function(rows) {
+                       //document.getElementById('name').innerHTML = rows[0].name + "<br />" +
+                         //'<img src="' + rows[0].pic_square + '" alt="" />' + "<br />"+rows[0].email;
+						 var stat='loggedout';
+						 if(stat=='loggedin'){
+				        document.getElementById('name').innerHTML = '<img src="' + response.pic_square + '" alt="" />';
+						  }
+						var name=response.name;
+						var email=response.email;
+                     
+                     });
+   // });
+	 var stat='loggedout';
+	  if(stat=='loggedout')
+	  	{
+		FB.logout(function(response) 
+			{
+			  // user is now logged out
+			});
+	 
+          }      // logged in and connected user, someone you know
+
+                // no user session available, someone you dont know
+              /*  var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+				a.setAttribute("class","fb");
+                a.innerHTML="<img src='http://118.94.177.106:8165/images/facebook-icon.png' />";
+                authbox.appendChild(a);*/
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+					FB.api('/me', function(response) {
+                     
+                     	
+					 	//document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var email=response.email;
+						var uid=response.id;
+						var page='';
+						 $.ajax({ 
+						  type: 'POST',                                     
+						  url: 'http://118.94.177.106:8165/ajax/facebook-ajax.php',                        
+						  data: 'email='+email+'&pass='+pic_square+'&name='+name,                        
+						  dataType: 'json',                   
+						  success: function(data)        
+							{
+							document.location.href="http://118.94.177.106:8165/userhome";
+							}           
+						  });
+                     
+                     
+    });
+						
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://118.94.177.106:8165";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+					
+					
+					
+                };
+				
+                //
+            
+            }
+            else {
+                // no user session available, someone you dont know
+                var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+               
+                authbox.appendChild(a);
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://118.94.177.106:8165";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+                };
+                //
+            }
+			
+        });
+ FB.Event.subscribe('auth.login', function () {
+ 		 FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                     //query.wait(function(rows) {
+					// document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var uid=response.id;
+						var email=response.email;
+						var page='';
+						$('<input />').attr({'type':'hidden', 'id':'fbname','value':email}).appendTo('#fbaccess');
+					if(email!='')
+					{
+					//{window.location = "http://118.94.177.106:8165/index.php/signup";}
+
+							$.ajax({ 
+							  type: 'POST',                                     
+							  url: 'http://118.94.177.106:8165/ajax/facebook-ajax.php',                         
+							  data: 'email='+email+'&pass='+uid+'&name='+name,                        
+							  dataType: 'json',                   
+							  success: function(data)        
+								{
+								window.location = "http://118.94.177.106:8165";
+								}           
+							  });
+					 }
+    //});
+    })
+         // window.location = "http://118.94.177.106:8165/index.php/signup";
+      });
+		
+					
+
+
+
+
+        FB.Event.subscribe('auth.logout', function(response) {
+		
+            //top.location.href = "http://facebook.com/shawnsspace.com";
+        });
+    };
+	
+    (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+            '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+    }());
+	
+</script>
+<div id="name1"></div>
+                <div class="facebook">
+                <a class="fb" href="#" onClick="FBlogin()" >
+                <img width="33" height="35" alt="facebook-icon" src="http://118.94.177.106:8165//images/facebook_icon.png" style="margin-top:10px;">                </a>                </div>
+                <div class="twitter">
+                 <a href="?login&oauth_provider=twitter">
+                <img width="33" height="35" alt="twitter-icon" src="http://118.94.177.106:8165//images/twitter_icon.png" style="margin-top:10px;">                </a>                </div>
+            </div>
+			
+		</div><!-- right-top-main -->
+		<div class="Remember-main">
+			<div class="FL">
+			<input type="checkbox" name="remember" value="1">
+			</div>
+			<div class="remembet-text">Remember Me</div>
+			<div class="Forget-pass Link" style="margin-left:80px;">
+				<a href="javascript:void(0)" class="Link" onClick="forgotPw();">Forgot password</a>
+			</div>
+            <div class="join-arrow">
+			<img width="10" height="9" alt="join-arrow" src="http://118.94.177.106:8165//images/arrow.png">
+			
+			<a class="join-text" href="http://118.94.177.106:8165/signup" >Join for free</a>
+			</div>
+	 </div>
+	 </form>  </div><!-- rightmain-->
+	
+	
+ 	<div class="clear"></div>
+	
+	<div id="menu-main">
+		
+		<div class="menu-inner-main">
+				<div class="search_txt  style2">Search to see If You have been Tellitized</div>
+				<div class="search-menu">
+					<a href="#">
+						<img width="28" height="31" alt="search-icon" src="http://118.94.177.106:8165//images/search-icon.png">
+					</a>
+				</div>
+				<div class="Navigation-main">
+				   <form name="search" action="http://118.94.177.106:8165/search" name="search-form" id="search-form" method="post">
+					<div class="navi-input-boxes">
+					<input class="input2" type="text" size="12" value="FIRST NAME" name="s_first_name" onFocus="if(this.value  == 'FIRST NAME') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'FIRST NAME'; } " id="s_first_name">
+					</div>
+					<div class="navi-input-boxes">
+					<input class="input2" type="text" value="LAST NAME" name="s_last_name" onFocus="if(this.value  == 'LAST NAME') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'LAST NAME'; } " id="s_last_name">
+					</div>
+					<div class="navi-input-boxes">
+					<input class="input2" type="text" value="AGE" name="s_age" onFocus="if(this.value  == 'AGE') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'AGE'; } " id="s_age">
+					</div>
+					<div class="navi-input-boxes">
+					<input class="input2" type="text" value="LOCATION" name="s_location" onFocus="if(this.value  == 'LOCATION') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'LOCATION'; } " id="s_location">
+					</div>
+					<!--<div class="navi-input-boxes">
+					<input class="input2" type="text" value="Zip Code" name="s_zipcode" onfocus="if(this.value  == 'Zip Code') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Zip Code'; } " id="s_zipcode">
+					</div>-->
+					
+					<div class="navi-input-boxes">
+					<input class="input2" type="text" value="tattos" name="s_tattos" onFocus="if(this.value  == 'tattos') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'tattos'; } " id="s_tattos">
+					</div>
+                    <div class="navi-input-boxes">
+					<input class="input2" type="text" value="NICK NAME" name="s_nick_name" onFocus="if(this.value  == 'NICK NAME') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'NICK NAME'; } " id="s_nick_name">
+					</div>
+                    <div class="navi-input-box-last">
+					<input class="input2" type="text" value="Others" name="s_others" onFocus="if(this.value  == 'Others') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Others'; } " id="s_others">
+					</div>
+                    
+					</form>
+				</div>
+				<div class="search-btn">
+					<a href="javascript:void(0);">
+					<img width="72" height="26" alt="search-btn" src="http://118.94.177.106:8165//images/search-btn.png" onClick="
+					 searchNow();">
+					</a>
+				</div>
+                
+	  </div><!--Navigation-main-->
+            <div class="faqs"><a href="http://118.94.177.106:8165/faq" class="faqs_link"></a></div>
+	</div><!--menu-inner-main-->
+    
+	</div><!--menu-main-->
+<div id="fbaccess"></div>
+
+<!--forgot pw pop up -->
+
+<div class="forgot_pw" style="display:none" >
+	<div class="pop_up_bg">
+    <div  class="close_Forgotpw">
+			<img src="http://118.94.177.106:8165/images/popup-close.jpg" alt="close"/>
+		</div>
+		
+       <form name="forgotPwForm" method="post" id="forgotPwForm">
+        <div id="forgotpw_content">
+            <h3>To reset your password, please first identify your account.
+            <ul>
+                <li>Enter Email Id</li>
+                <li><input type="text" name="emailidForPw" value="" id="emailidForPw"></li>
+                <li class="lisubmit"><div id="submit_email" onClick="searchEmail();"><span>SUBMIT</span></div></li>
+            </ul>
+              <span class="email_er" style="display:none"></span>
+            </h3>
+            
+            </div>
+        </form>
+      </div>  
+</div> 
+<!-- ends forgot pw pop up-->
+
+<script src="http://118.94.177.106:8165//functions/javascript/jquery-1.7.1.min.js" type="text/javascript"> </script>
+<script src="http://118.94.177.106:8165//functions/javascript/home.js" type="text/javascript"> </script>
+
+<script language="javascript">
+
+$(document).ready(function() {
+
+	
+		 
+		 $('.close_Forgotpw').click(function() {
+			
+		 	$('.forgot_pw').hide();
+			$('.modalOverlayHed').hide();
+			
+			
+			
+	     });
+		
+	});
+	
+ function loginKeyPress(e)
+    {
+        // look for window.event in case event isn't passed in
+        if (typeof e == 'undefined' && window.event) { e = window.event; }
+        if (e.keyCode == 13)
+        {
+		   verifyLogin();
+        }
+    }
+function login(){
+	dataString = $('form[name=login]').serialize();
+			
+	
+		$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/user-ajax.php?mode=login_user",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {    
+				//alert("login success");
+				$('#loginForm').submit();
+				}
+				else if(data.success == "no")
+			    {    
+					$('.log_er').show();
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+		
+}
+
+
+function searchEmail(){
+	  $('.email_er').hide();
+	  var email=$.trim($("#emailidForPw").val());
+	   if($.trim($("#emailidForPw").val()) == ""){
+		$("#emailidForPw").css("border","1px solid red");			  
+		 return false;
+		 }
+		else if(!checkemail(email)){
+		    $('.email_er').html('');
+			$('.email_er').html('Invalid email');
+			$('.email_er').show('');
+		   	$("#emailidForPw").css("border","1px solid red");			  
+		 return false;
+			
+    	}
+		else{
+			$("#emailidForPw").css("border","1px solid #CCCCCC");	
+		}
+	$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/user-ajax.php?mode=searchEmail&email="+email,
+			cache: false,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {  
+				$('.email_er').html('');
+				$('.email_er').html('New password is sent to your mail.Please check');
+				$('.email_er').show('');
+				}
+				else if(data.status== "notexist")
+			    {    
+					$('#emailidForPw').val("");
+					$('.email_er').html('');
+					$('.email_er').html('Emailid not exist in Tellitize');					
+					$('.email_er').show('');
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+}
+</script></div>
+
+
+	<div id="mid_container">
+			<div class="mid_content">
+				<div class="left">
+						<div class="top_bar">
+							<div class="man_icon"></div>
+							<div class="mid-text">
+								<h4>Ever wonder what those that know you think of you?</h4>
+								<h3>Tellitize your public perception</h3>
+							</div>
+							<div class="user_group">
+								<h3>Say What's On Your Mind</h3>
+							</div>
+						</div><!--top_bar-->
+						<div class="post_main">
+							<div class="post_main_content">
+								  <form action="http://118.94.177.106:8165/posts" method="post" accept-charset="utf-8" name="publicPost" id="publicPost">								  								<div class="anonyms_text">FROM:<span style="color:#FF7C00;font-weight:bold;"> Anonymous</span> </div>
+								
+								<div style="" class="tellitize_text"><h2>Tellitize</h2></div>
+								<div class="black_sep"></div>
+									
+								
+								
+									<textarea class="tetlize-text-comment" name="commentArea" id="commentArea"  
+										onfocus="if(this.value  == 'Type Text Here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type Text Here'; } "   
+										onClick="notValid();"
+										/>Type Text Here</textarea>
+							
+								
+								<!--<div class="titlz-namebox-bottom"></div>	-->
+								<input type="hidden" name="location" id="location" value=" Louisville, KY
+, UNITED STATES (US)
+">
+								 <div  class="top_from" style="width:92%;margin-left:4%;margin-bottom:3px;">
+								
+								
+								<!--<div style="float:left;padding-right:1%;width:53%">
+									<div style="float:left"><input type="checkbox" value="1" name="postasuser"></div>
+									<span  class="as_user"></span>
+									
+								</div>-->
+																
+								
+								<div class="post-btn">
+								
+								<a href="javascript:void(0)">
+								<img width="72" height="26" alt="post-comment" src="../images/post.png" 
+								onClick="notValid();">
+								</a>
+								</div>
+								<div style="margin-left:10px;" class="postTopBox"><div class="postTop-title">SELECT CATEGORY: </div>
+								  <div><select name="category" id="category" class="toppost">
+										<option value="0">Select</option><option value="1">None</option><option value="2">Apologize to Somebody</option><option value="3">Send an I Love You</option><option value="5">Get Something Off Your Mind</option><option value="6">Send a Compliment</option><option value="7">Reveal a Crush</option><option value="8">Confessions</option><option value="10">Generally Speaking</option><option value="11">Celebrity Talk</option><option value="12">Send a Thank You</option><option value="13">Expose a Cheater</option><option value="14">Locate Somebody</option><option value="15">Today's News</option><option value="16">Tell Somebody Off</option></select> </div>
+									
+								</div>
+																<!--<div style="margin-left:10px;" class="postTopBox"><div class="postTop-title">PLACES OF DISCUSSION: </div>
+									  <div></div>
+									
+								</div>
+								<div style="margin-left:10px;" class="postTopBox"> <div class="postTop-title">GROUP :</div>
+									<div></div>
+								</div>-->
+								
+								
+								</div>
+							
+							
+							</div>
+							</form>							
+							
+							
+						</div><!--post_main-->
+						
+						<div class="post_area_bg">
+								<div class="orang_left"></div>
+								<div class="orang_mid">
+									<h4>Tellitize POST AREA</h4>
+									<span style="float:right">
+									<a href="javascript:void(0)"  onClick="refreshPost();"><img width="102" height="36" alt="refresh-icon" src="../images/refresh-icon.png" id="refresh"></a>
+									</span>
+									</div>
+								<div class="orang_rit"></div>
+								
+						</div>
+						<div id="post_contents">
+						
+							<div class="contents_list" id="301">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/colnovation/301">colnovation</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Doug Good</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-30-2012, Durham, NC
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  alt="photo" width="39" height="42" alt="img" class="bdr" src="http://118.94.177.106:8165//ajax/uploads/1350428890929.JPG" /></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  hi ashish, please see elance email
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle301">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle301">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn301">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn301" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd301">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn301" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="colnovation,hi ashish, please see elance email"  addthis:description=" hi ashish, please see elance email">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="300">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/New-York/300">New York</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Anonymous</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-30-2012, (Unknown City?)
+, (Unknown Country?) (XX)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  src="http://118.94.177.106:8165/images/user-photo.jpg" width="39" height="42" alt="img" class="bdr"/></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  Jerk is a bad word
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle300">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle300">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn300">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn300" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd300">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn300" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="New York,Jerk is a bad word"  addthis:description=" Jerk is a bad word">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="299">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Wassup-People/299">Wassup People</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Barry  Dickson</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-30-2012, (Unknown City?)
+, (Unknown Country?) (XX)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  alt="photo" width="39" height="42" alt="img" class="bdr" src="http://118.94.177.106:8165//ajax/uploads/1350413952049.JPG" /></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  Wassup People!!!
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle299">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle299">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn299">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn299" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd299">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn299" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Wassup People,Wassup People!!!"  addthis:description=" Wassup People!!!">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="297">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Yahoo-Test/297">Yahoo Test</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Barry  Dickson</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, (Unknown City?)
+, (Unknown Country?) (XX)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  alt="photo" width="39" height="42" alt="img" class="bdr" src="http://118.94.177.106:8165//ajax/uploads/1350413952049.JPG" /></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  Trips Trips...
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle297">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle297">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn297">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn297" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd297">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn297" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Yahoo Test,Trips Trips..."  addthis:description=" Trips Trips...">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="296">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Tony-Clark/296">Tony Clark</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Douglas Cgood</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Durham, NC
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  src="http://118.94.177.106:8165/images/user-photo.jpg" width="39" height="42" alt="img" class="bdr"/></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  Your name has been mentioned in the Tellitize Place.  Please replace PLACE with the CATEGORY Name in the emails.  For example. We Have Received A Message About You In Our SEND A COMPLIMENT category.  Please view the message here (the URL of ths post).  This has been requested all along.  Thanks!
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle296">1</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle296">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn296">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn296" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd296">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn296" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Tony Clark,Your name has been mentioned in the Tellitize Place.  Please replace PLACE with the CATEGORY Name in the emails.  For example. We Have Received A Message About You In Our SEND A COMPLIMENT category.  Please view the message here (the URL of ths post).  This has been requested all along.  Thanks!"  addthis:description=" Your name has been mentioned in the Tellitize Place.  Please replace PLACE with the CATEGORY Name in the emails.  For example. We Have Received A Message About You In Our SEND A COMPLIMENT category.  Please view the message here (the URL of ths post).  This has been requested all along.  Thanks!">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="295">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Test-Email-As-Self/295">Test Email As Self</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Douglas Cgood</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Durham, NC
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  src="http://118.94.177.106:8165/images/user-photo.jpg" width="39" height="42" alt="img" class="bdr"/></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  This is the text sent to my NON YAHOO email address. What is the OTHER for?  Your name has been mentioned in the Tellitize  Other.  Also, need a space before http to properly display the LINK
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle295">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle295">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn295">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn295" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd295">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn295" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Test Email As Self,This is the text sent to my NON YAHOO email address. What is the OTHER for?  Your name has been mentioned in the Tellitize  Other.  Also, need a space before http to properly display the LINK"  addthis:description=" This is the text sent to my NON YAHOO email address. What is the OTHER for?  Your name has been mentioned in the Tellitize  Other.  Also, need a space before http to properly display the LINK">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="294">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Non-Yahoo-Email-addresses-Work/294">Non Yahoo Email addresses Work</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Douglas Cgood</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Durham, NC
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  src="http://118.94.177.106:8165/images/user-photo.jpg" width="39" height="42" alt="img" class="bdr"/></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  Emails seem to work to non YAHOO email addresses
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle294">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle294">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn294">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn294" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd294">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn294" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Non Yahoo Email addresses Work,Emails seem to work to non YAHOO email addresses"  addthis:description=" Emails seem to work to non YAHOO email addresses">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="293">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/complaint/293">complaint</a></div>
+											<div class="user-post-id" >From: <span class="id-text">sue good</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Vallejo, CA
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  src="http://118.94.177.106:8165/images/user-photo.jpg" width="39" height="42" alt="img" class="bdr"/></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  please fix e-mail sign-in.
+
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle293">2</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle293">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn293">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn293" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd293">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn293" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="complaint,please fix e-mail sign-in.
+"  addthis:description=" please fix e-mail sign-in.
+">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="292">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Emails/292">Emails</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Doug Good</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Louisville, KY
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  alt="photo" width="39" height="42" alt="img" class="bdr" src="http://118.94.177.106:8165//ajax/uploads/1350428890929.JPG" /></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  sorry mean LINK needs to show up as a URL link without typing http.  please fix.  also, please correct the PHP in the emails sent to reflect the proper text.  i cannot test this because this site wont send emails to my YAHOO email address
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle292">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle292">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn292">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn292" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd292">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn292" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Emails,sorry mean LINK needs to show up as a URL link without typing http.  please fix.  also, please correct the PHP in the emails sent to reflect the proper text.  i cannot test this because this site wont send emails to my YAHOO email address"  addthis:description=" sorry mean LINK needs to show up as a URL link without typing http.  please fix.  also, please correct the PHP in the emails sent to reflect the proper text.  i cannot test this because this site wont send emails to my YAHOO email address">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div><div class="contents_list" id="291">
+					     <div id="article">
+									<div class="post_user-main">
+										<div class="user_post-icon"></div>
+										<div class="userpost-name">
+											 <div class="userpost-title"><a href="http://118.94.177.106:8165/TELLITIZE/Yahoo/291">Yahoo</a></div>
+											<div class="user-post-id" >From: <span class="id-text">Doug Good</span></div>
+										 </div>
+										 <div class="userpost-city">Posted: 10-29-2012, Louisville, KY
+, UNITED STATES (US)
+</div>
+									 </div>
+									
+										<div class="profilepicpost" style="float:left">
+												<a class="link_user" href="javascript:void(0)"><img  alt="photo" width="39" height="42" alt="img" class="bdr" src="http://118.94.177.106:8165//ajax/uploads/1350428890929.JPG" /></a>
+										</div>
+										<div class="postcontent-main">
+											
+											 <div class="postcontent">
+												  email needs to be a link when you type a URL without http
+											 </div>
+											  <div class="postcontent-aggre-main">
+													 <div class="circle" id="agree_circle291">0</div>
+													 <div class="people-agree">people Agree</div>
+													 <div class="circle" id="disagree_circle291">0</div>
+													  <div class="people-agree">people disAgree</div>
+													   <div class="report-abues reLink" ><a  class="reLink" href="javascript:void(0)"onclick="notValidUser()">Report Abuse</a></div><div  class="agree-btn "  id="btn291">
+													   
+													 	<a href="javascript:void(0)"onclick="notValidUser()" id="agreebtn291" class="able_agree">agree</a>
+													 </div> <div  class="disagree-btn" id="btnd291">
+													 	 <a href="javascript:void(0)"onclick="notValidUser()"  id="disagreebtn291" " class="able_disagree">disagree</a>
+													  </div><div class="share"><div class="addthis_toolbox addthis_default_style " >
+
+  										<a class="addthis_button"  href="javascript:void(0)" addthis:url="http://118.94.177.106:8165/" 
+										  addthis:title="Yahoo,email needs to be a link when you type a URL without http"  addthis:description=" email needs to be a link when you type a URL without http">share</a>
+								</div></div>
+										 </div>
+									</div>
+								</div></div>						 	
+						
+						</div>
+						<!--<div style="color:#565656;clear:left;font:12px arial;font-weight:bold;float:right;padding-top:-5px;"><a href="http://118.94.177.106:8165/index.php/posts">View More</a></div>-->
+						     
+						
+				</div><!--left-->
+				
+				<style type="text/css">
+#mid_container #discussion ul.discussions li.discussion:hover{
+	
+	height:25px;
+}
+</style>
+<div class="rit">
+					<div class="group_user">
+					  							
+									<p><img width="188" height="285" alt="img-groups" src="http://118.94.177.106:8165/images/left-men-img.jpg">					  </p>
+									
+							<a href="http://118.94.177.106:8165/signup" ><div class="join_free"></div></a>
+							<div style="width:195px;">
+                                      <div class="top_bar category">Send Special Messages </div>
+									  <ul class="catList">
+                                        <li><a href="http://118.94.177.106:8165/None">None</a></li>
+									    <li><a href="http://118.94.177.106:8165/Apologize-to-Somebody">Apologize to Somebody</a></li>
+									    <li><a href="http://118.94.177.106:8165/Send-an-I-Love-You">Send an I Love You</a></li>
+									    <li><a href="http://118.94.177.106:8165/Get-Something-Off-Your-Mind">Get Something Off Your Mind</a></li>
+									    <li><a href="http://118.94.177.106:8165/Send-a-Compliment">Send a Compliment</a></li>
+									    <li><a href="http://118.94.177.106:8165/Reveal-a-Crush">Reveal a Crush</a></li>
+									    <li><a href="http://118.94.177.106:8165/Confessions">Confessions</a></li>
+									    <li><a href="http://118.94.177.106:8165/Generally-Speaking">Generally Speaking</a></li>
+									    <li><a href="http://118.94.177.106:8165/Celebrity-Talk">Celebrity Talk</a></li>
+									    <li><a href="http://118.94.177.106:8165/Send-a-Thank-You">Send a Thank You</a></li>
+									    <li><a href="http://118.94.177.106:8165/Expose-a-Cheater">Expose a Cheater</a></li>
+									    <li><a href="http://118.94.177.106:8165/Locate-Somebody">Locate Somebody</a></li>
+									    <li><a href="http://118.94.177.106:8165/Todays-News">Today's News</a></li>
+									    <li><a href="http://118.94.177.106:8165/Tell-Somebody-Off">Tell Somebody Off</a></li>
+								      </ul>
+					  </div>
+									<p>&nbsp;        </p>
+							<div class="about">
+								
+								<span class="Black">About</span>
+								<span class="orange">Tellitize</span>
+								<div class="small_rit_nav_txt">Everyone's day usually consists of other people, places, and a host of topics. <br/> <br/> Here at TelliTize, you may speak your mind about these people and places. You can post as YOURSELF or ANONYMOUSLY so that nobody will ever know who created the post. Constructive criticism is sometimes very productive and we intend our website to help people be the best they can be. They may not realize they are doing things wrong. Whether it be in the workplace, or in everyday life. Let's bring their shortcomings and strong points to light so they can see their public perception. . TelliTize somebody today! 
+                           
+							</div>
+                            
+							</div>
+      </div>
+</div>
+<script src="http://118.94.177.106:8165//functions/javascript/group.js" type="text/javascript"> </script>	</div>
+	</div><!-- mid-->
+<div id="footer">
+<div id="footer-wrapper">
+<div class="footer-main">
+<div class="link-footer Link02">
+<a class="Link02" href="http://118.94.177.106:8165/">Home</a>
+|
+<a class="Link02" href="http://118.94.177.106:8165/about-us">About Us</a>
+|
+<a class="Link02" href="http://118.94.177.106:8165//privacy-policy">Privacy Policy</a>
+|
+<a class="Link02" href="http://118.94.177.106:8165/terms-of-use">Terms of Use</a>
+|
+<a class="Link02" href="http://118.94.177.106:8165/contact-us">Contact Us</a>
+
+</div>
+<div class="copyright">Copyright &copy; tellitize.com 2012. All Rights Reserved</div>
+</div>
+</div>
+
+
+</div>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8102551; 
+var sc_invisible=1; 
+var sc_security="ae11dd52"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/8102551/0/ae11dd52/1/"
+alt="web analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+<!--post_about pop up-->
+<form action="http://118.94.177.106:8165/posts" method="post" accept-charset="utf-8" name="postAbout" id="posts"><div class="post_about" style="display:none">
+  <div class="pop_up_bg"	>
+		<div  class="close_signUp_post" id="close_signUp">
+			<img src="http://118.94.177.106:8165/images/popup-close.jpg" alt="close"/>
+		</div>
+		<div id="post_main_text">Let's title your Post so It's Easy to Find</div>
+		<div style="clear:left" class="post_about_content">
+		<h3>Is your message about a
+		<input type="radio" name="post_about" value="person" id="person">Person
+		<input type="radio" name="post_about" value="place" id="place">Place
+		<input type="radio" name="post_about" value="other" id="other">Other</h3>
+		</div>
+		
+		<ul id="person_area" style="display:none">
+			<li style="float:left">First Name</li>
+			<li style="float:left">
+				<input type="text" name="first_name" value="Type first name here" onFocus="if(this.value  == 'Type first name here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type first name here'; } " id="first_name">
+			</li>
+			<li style="clear:left;float:left">Last Name</li>
+			<li style="float:left">
+				<input type="text" id="last_name" name="last_name" value="Type last name here" onFocus="if(this.value  == 'Type last name here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type last name here'; } ">
+			</li>
+			<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="show_nextEmail()" id="postbtn"></li>
+			
+			
+		</ul>
+		<ul id="place_area" style="display:none">
+			<li style="float:left"> Name of Place</li>
+			<li style="float:left">
+				<input type="text" name="place_name" value="Type name of place here" onFocus="if(this.value  == 'Type name of place here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type name of place here'; } " id="place_name">
+			</li>
+			
+			<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="post_withComment()" id="postbtn"></li>
+			
+			
+		</ul>
+		<ul id="other_area" style="display:none">
+			<li style="float:left">Enter here...</li>
+			<li style="float:left">
+				<input type="text" name="other_desc" value="Type text here" onFocus="if(this.value  == 'Type text here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type text here'; } " id="other_desc">
+			</li>
+			
+			<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="post_withComment()" id="postbtn"></li>
+			
+			
+		</ul>
+		<!--<a href="javascript:void(0)" onClick="skipPost(1);">Skip</a>-->
+	</div>	
+
+</div>
+</form><!-- ends post_about  pop up-->
+
+
+<!--email_add pop up -->
+
+<div class="email_add" style="display:none" >
+	<div class="pop_up_bg"	>
+		
+       <form name="mailAlert" method="post" id="mailAlert">
+        <div id="email_add_content">
+            <h3>Do You know email address of this person ?
+            <input type="radio" name="email" value="1" id="email_yes">Yes
+            <input type="radio" name="email" value="0" id="email_no" >No
+            </h3>
+            <div style="display:none" id="email_field">
+                <ul>
+                <li style="float:left">Email Id</li>
+                <li style="float:left;padding-left:15px;">
+                    <input type="text" id="email" name="email" value="Enter email address here" onFocus="if(this.value  == 'Enter email address here') { this.value = ''; } " 
+                                            onblur="if(this.value == '') { this.value = 'Enter email address here'; } ">
+                </li>
+             <li class="sentmailbtn"><input type="button" value="Send Alert" onClick="sendAlert()" id="postbtn"></li>
+             </ul>
+             </div>
+             <a href="javascript:void(0)" onClick="skipPost(2);" class="skipbtn">Skip</a>
+             </div>
+            </div>
+        </form>
+      </div>  
+</div> 
+<!-- ends email_add pop up-->
+
+<!--email_from pop up -->
+
+<div class="email_from" style="display:none" >
+	<div class="pop_up_bg">
+		
+       <form name="mailFrom" method="post" id="mailFrom">
+        <div id="email_add_content">
+            <h3>Would you like to send this Post to somebody Anonymously?
+            <input type="radio" name="anony_email" value="1" id="anony_email_yes" onClick="sendEmailanonymousCheck(1);">Yes
+            <input type="radio" name="anony_email" value="0" id="anony_email_no" onClick="sendEmailanonymousCheck(0);">No
+            <input type="hidden" name="emailidUser" value="" id="emailidUser">
+            </h3>
+            
+            </div>
+        </form>
+      </div>  
+</div> 
+<!-- ends email_from pop up-->
+
+</html>
+<script language="javascript">
+
+
+	$(document).ready(function() {
+
+	
+		 
+		 $('#close_signUp').click(function() {
+			// $('#filter_contact').hide();
+		 	$('.post_about').hide();
+			//$("#email").val("");
+			$('.modalOverlay').hide();
+			
+			
+			
+	     });
+		 $('input[id=email_yes]').change(function(){
+           $('#email_field').show();
+	});
+	$('input[id=email_no]').change(function(){
+			   $('#email_field').hide();
+	});
+	 $('input[id=person]').change(function(){
+           $('#person_area').show();
+		   $('#place_area').hide();
+			$('#other_area').hide();
+	});
+	$('input[id=place]').change(function(){
+           $('#place_area').show();
+		   $('#person_area').hide();
+			$('#other_area').hide();
+	});
+	$('input[id=other]').change(function(){
+           $('#other_area').show();
+		   $('#person_area').hide();
+			$('#place_area').hide();
+	});
+function lastPostFunc() 
+{ 
+   $("#receiveImg").html(''); 
+   
+    $(".contents_list:last").after('<div class="receive_text"><div id="receiveImg"><img src="http://118.94.177.106:8165//images/recivingGif.gif" width="174" height="89"></div></div>');
+   
+	$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/scroll-ajax.php?mode=getLastPosts&lastID=" + $(".contents_list:last").attr("id"), 
+			cache: false,
+			dataType: "json",
+			success: function(data) {	
+             if(data.success == "yes")
+			  {    
+				 $(".receive_text").html('');
+				  $("#receiveImg").html('');
+				 $(".contents_list:last").after(data.html);  
+				}
+			
+				
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+};  
+	var $myDiv = $('.contents_list');
+
+    if ( $myDiv.length){
+	
+			 $(window).scroll(function(){
+			if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+			   lastPostFunc();
+			}
+			});
+		} 
+		
+    });
+
+
+	function refreshPost(){
+	        $('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/user-ajax.php?mode=viewComment",
+			cache: false,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {    
+				
+				//$('#post_contents').html('');
+				$('#post_contents').html(data.html);
+				
+				
+				}
+				else if(data.success == "no")
+			    {    
+					alert("failed to load");
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	function postComment(){
+	
+	  
+		dataString = $('form[name=publicPost]').serialize();
+		dataString+="&"+ $('form[name=postAbout]').serialize();
+		if($.trim($("#email").val()) != "" || $.trim($("#email").val()) != "Enter email address here"){
+		dataString+="&"+ $('form[name=mailAlert]').serialize();
+		dataString+="&"+ $('form[name=mailFrom]').serialize();
+		}	
+	
+		$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/user-ajax.php?mode=saveComment",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {    
+				
+				$('#commentArea').val('');
+				$('#email').val('');
+				refreshPost();
+				
+				}
+				else if(data.success == "no")
+			    {    
+					if(data.status == "notauser"){
+					  alert("Please login to post");
+					}
+					else
+					{ 
+					alert("failed ");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+		
+	}
+
+function agreePost(id){
+	        dataString='postid='+id+'&lik=1';
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=agreePost",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('#agree_circle'+id).html('');
+				$('#agree_circle'+id).html(data.agree);
+				$('#disagree_circle'+id).html('');
+				$('#disagree_circle'+id).html(data.disagree);
+				$('#agreebtn'+id).hide();
+				$('#agreebtn'+id).hide();
+				$('#btn'+id).html("");
+				$('#btn'+id).html('<a href="javascript:void(0)"  id="disagreebtn" class="disable_agree"></a>');
+				$('#btnd'+id).html("");
+				$('#btnd'+id).html('<a href="javascript:void(0)"  id="disagreebtn'+id+'" class="able_disagree" onclick="disagreePost('+id+')">disagree</a>');
+				//$('#disagreebtn'+id).hide();
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already agreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	function disagreePost(id){
+	        dataString='postid='+id+'&lik=0';
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=agreePost",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('#agree_circle'+id).html('');
+				$('#agree_circle'+id).html(data.agree);
+				$('#disagree_circle'+id).html('');
+				$('#disagree_circle'+id).html(data.disagree);
+				//$('#agreebtn'+id).hide();
+				//$('#disagreebtn'+id).hide();
+				$('#btnd'+id).html("");
+				$('#btnd'+id).html('<a href="javascript:void(0)"  id="disagreebtn" class="disable_disagree"></a>');
+				$('#btn'+id).html("");
+				$('#btn'+id).html('<a href="javascript:void(0)" id="agreebtn'+id+'" class="able_agree" onclick="agreePost('+id+')">agree</a>');
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	
+	
+function postReply(id){
+			//$('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+			if($.trim($('#commentreplyArea'+id).val()) == ""){
+			$('#commentreplyArea'+id).css("border","1px solid red");			  
+			 return false;
+			 }
+			 else{
+				$('#commentreplyArea'+id).css("border","");	
+			}
+			var comment=$('#commentreplyArea'+id).val();
+	        dataString='postid='+id+'&comment='+comment;
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=postReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {  
+			  	 $('.view_all'+id).html('');
+				 $('.view_all'+id).html(data.view);
+				$('.viewList'+id).html('');
+				$('#commentreplyArea'+id).val('');
+				$('.viewList'+id).html(data.html);
+				//alert("s");
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+   function reportAbuse(id){
+			$('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+	        dataString='postid='+id;
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=reportAbuse",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				refreshPost();
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	
+  function viewreplies(id){	
+  	 		dataString='postid='+id;
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=viewReplies",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {      
+			        $('.view_all'+id).html('');
+			  		 $('.viewList'+id).html('');
+			   		$('.viewList'+id).html(data.html);
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+ } 
+ 
+ function agreeReply(id){
+	        dataString='replyid='+id+'&lik=1';
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=agreeReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				
+				
+				$('.agreeReply'+id).html("");
+				$('.agreeReply'+id).html("<a>Agreed</a>");
+				$('.disagreeReply'+id).html("");
+				$('.disagreeReply'+id).html('<a onclick="disagreeReply('+id+');" href="javascript:void(0);">Disgree </a>');
+				$('#agreereply_circle'+id).html('');
+				$('#agreereply_circle'+id).html(data.agree);
+				$('#disagreereply_circle'+id).html('');
+				$('#disagreereply_circle'+id).html(data.disagree);
+				
+				//alert(""+data.agree);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already agreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	 function disagreeReply(id){
+	        dataString='replyid='+id+'&lik=0';
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=agreeReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				
+				$('.disagreeReply'+id).html("");
+				$('.disagreeReply'+id).html("<a>Disgreed</a>");
+				$('.agreeReply'+id).html("");
+				$('.agreeReply'+id).html('<a onclick="agreeReply('+id+');" href="javascript:void(0);">Agree</a>');
+				$('#agreereply_circle'+id).html('');
+				$('#agreereply_circle'+id).html(data.agree);
+				$('#disagreereply_circle'+id).html('');
+				$('#disagreereply_circle'+id).html(data.disagree);
+				
+				//alert(""+data.agree);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	
+	function deleteReply(id,pid){
+	         dataString='replyid='+id+'&pid='+pid;
+			$.ajax({
+			type: "POST",
+			url: "http://118.94.177.106:8165/ajax/post-ajax.php?mode=deleteReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('.view_all'+pid).html('');
+				$('.view_all'+pid).html(data.view);
+				$('.viewList'+pid).html('');
+				$('#commentreplyArea'+pid).val('');
+				$('.viewList'+pid).html(data.html);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	
+/*function saveTilte(id){
+alert(id);
+$( 'title' ).html ( 'new title' +id); 
+}*/	
+					
+</script>
+
+<!-- AddThis Button BEGIN 
+<script type="text/javascript">var addthis_config = {"ui_click": "true"}</script>-->
+<script type="text/javascript">var addthis_config = {"ui_click": "true","services_compact": "facebook, twitter", "services_exclude": "linkedin" }</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50657e722d6e2021"></script>
+<!-- AddThis Button END -->

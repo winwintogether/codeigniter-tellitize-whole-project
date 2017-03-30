@@ -1,0 +1,95 @@
+/* ###### admin page ########*/
+.admin_contents {
+padding:42px;
+font-family:Arial, Helvetica, sans-serif;font-size:12px; font-weight:normal; color:#333333;
+}
+.admin_links {
+margin:10px 1px 10px 13px;
+text-align:left;
+font-family:Arial, Helvetica, sans-serif;font-size:12px;
+}
+.admin_logout {
+float:right;
+padding: 62px 69px 1px 10px;
+}
+.link_admin {
+padding-right:20px;
+padding-left: 30px;
+}
+.admin_links h4{
+font-family:Arial, Helvetica, sans-serif;font-size:13px; font-weight:bold; color:#333333;
+}
+.user_details_tbl {
+font-family:Arial, Helvetica, sans-serif;font-size:12px;
+}
+.admin_links .input_txt{
+	background-color: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #B5B5B5;
+    float: left;
+	height:26px;
+	width:300px;
+	margin-top: 6px;
+}
+.admin_links .txt-area {
+	background-color: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #B5B5B5;
+    float: left;
+	width:300px;
+	margin-top: 6px;
+}
+.category_management_tbl {
+font-family:Arial, Helvetica, sans-serif;font-size:13px; font-weight:normal; color:#333333;
+}
+.cat-add {
+    background: url("../../images/blank-btn-bg.png") no-repeat scroll 0 0 transparent ;
+    height: 26px;
+    text-align: center;
+    width: 77px;
+	border:none;
+	font-family:Arial, Helvetica, sans-serif;font-size:13px; font-weight:bold; color:#333333;
+	float:right;
+}
+.category_list_tbl {
+font-family:Arial, Helvetica, sans-serif;font-size:13px; font-weight:normal; color:#333333;
+}
+
+
+.login-bt {
+background:url(../../images/login-btn.png) no-repeat;
+ height: 38px;
+ width: 96px;
+ border:none;
+}
+.first{
+	background-color:#E2e2e2;
+	border:none;
+}
+.sec{
+	background-color:#FFFFFF;
+	border:none;
+}
+td{
+	text-align:top;
+}
+.post_managnt_tbl {
+font-family:Arial, Helvetica, sans-serif;font-size:14px; font-weight:normal; color:#333333;
+border:1pt #999999 solid;
+border-collapse:separate;
+border-spacing: 2px;
+}
+#admin_rit{
+
+	border:1px solid #CCCCCC;
+	float:left;width:35%;overflow-y: scroll;height:370px;margin-right:8%;margin-top:30px;
+}
+#admin_rit ul li{
+
+padding-bottom:10px;
+line-height:20px;}
+#mid_container .mid_content{
+	margin-bottom:100px;
+}

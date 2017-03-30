@@ -1,0 +1,184 @@
+<div><?php 
+if(isset($_SESSION['userid'])) {  $stat= 'loggedin'; } else { $stat= 'loggedout'; }
+?></div>
+<style type="text/css">
+.fb{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#FFFFFF;
+}
+</style>
+<div id="FBauth"></div>
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId  : ' 171832922955728',
+            status : true, // check login status
+            cookie : true, // enable cookies to allow the server to access the session
+            xfbml  : true, // parse XFBML
+            //channelUrl : 'http://WWW.MYDOMAIN.COM/channel.html', // channel.html file
+            oauth  : true // enable OAuth 2.0
+        });
+        if (window!=window.top) {
+            FB.Canvas.setAutoResize();
+        };
+        FB.getLoginStatus(function(response) {
+            if (response.authResponse) {
+			
+			        FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                    // query.wait(function(rows) {
+                       //document.getElementById('name').innerHTML = rows[0].name + "<br />" +
+                         //'<img src="' + rows[0].pic_square + '" alt="" />' + "<br />"+rows[0].email;
+						 var stat='<?php echo $stat;?>';
+						 if(stat=='loggedin'){
+				        document.getElementById('name').innerHTML = '<img src="' + response.pic_square + '" alt="" />';
+						  }
+						var name=response.name;
+						var email=response.email;
+                     
+                     });
+   // });
+	 var stat='<?php echo $stat;?>';
+	  if(stat=='loggedout')
+	  	{
+		FB.logout(function(response) 
+			{
+			  // user is now logged out
+			});
+	 
+          }      // logged in and connected user, someone you know
+
+                // no user session available, someone you dont know
+              /*  var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+				a.setAttribute("class","fb");
+                a.innerHTML="<img src='<?php echo base_url();?>images/facebook-icon.png' />";
+                authbox.appendChild(a);*/
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+					FB.api('/me', function(response) {
+                     
+                     	
+					 	//document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var email=response.email;
+						var uid=response.id;
+						var page='<?php echo $this->uri->segment(2);?>';
+						 $.ajax({ 
+						  type: 'POST',                                     
+						  url: '<?php echo base_url();?>ajax/facebook-ajax.php',                        
+						  data: 'email='+email+'&pass='+pic_square+'&name='+name,                        
+						  dataType: 'json',                   
+						  success: function(data)        
+							{
+							document.location.href="<?php echo base_url();?>userhome";
+							}           
+						  });
+                     
+                     
+    });
+						
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://www.tellitize.com";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+					
+					
+					
+                };
+				
+                //
+            
+            }
+            else {
+                // no user session available, someone you dont know
+                var authbox = document.getElementById('FBauth');
+                authbox.innerHTML="";
+                var a = document.createElement('a');
+                a.setAttribute("href","javascript:void();");
+                a.setAttribute("onclick","FBlogin();");
+               
+                authbox.appendChild(a);
+
+                window.FBlogin = function(){
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+						
+
+                        } // Push user name for personalization.
+                        else {
+                            top.location.href = "http://www.tellitize.com";
+                              // user cancealed login.
+							  
+                        }
+                    }, {scope: 'email'});
+                };
+                //
+            }
+			
+        });
+ FB.Event.subscribe('auth.login', function () {
+ 		 FB.api('/me', function(response) {
+					
+                    // var query = FB.Data.query('select name, email, hometown_location, sex, pic_square from user where uid={0}', response.id);
+                     //query.wait(function(rows) {
+					// document.getElementById('name').innerHTML = '<img src="' + rows[0].pic_square + '" alt="" />';
+						var name=response.name;
+						var uid=response.id;
+						var email=response.email;
+						var page='<?php echo $this->uri->segment(2);?>';
+						$('<input />').attr({'type':'hidden', 'id':'fbname','value':email}).appendTo('#fbaccess');
+					if(email!='')
+					{
+					//{window.location = "http://118.94.177.106:8165/index.php/signup";}
+
+							$.ajax({ 
+							  type: 'POST',                                     
+							  url: 'http://www.tellitize.com/ajax/facebook-ajax.php',                         
+							  data: 'email='+email+'&pass='+uid+'&name='+name,                        
+							  dataType: 'json',                   
+							  success: function(data)        
+								{
+								window.location = "http://www.tellitize.com";
+								}           
+							  });
+					 }
+    //});
+    })
+         // window.location = "http://118.94.177.106:8165/index.php/signup";
+      });
+		
+					
+
+
+
+
+        FB.Event.subscribe('auth.logout', function(response) {
+		
+            //top.location.href = "http://facebook.com/shawnsspace.com";
+        });
+    };
+	
+    (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+            '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+    }());
+	
+</script>
+<div id="name1"></div>

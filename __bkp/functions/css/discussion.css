@@ -1,0 +1,112 @@
+#places{
+	width:519px;
+}
+ a.add-btn,.a.add-btn:hover ,a.add-btn:visited ,a.add-btn:active {
+    -moz-text-blink: none;
+    -moz-text-decoration-color: -moz-use-text-color;
+    -moz-text-decoration-line: none;
+    -moz-text-decoration-style: solid;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../../images/blank-btn-bg.png");
+    background-origin: padding-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    color: #000000;
+    float: left;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    height: 19px;
+    padding-top: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 72px;
+}
+#add_result{
+	display:none;
+	clear:both;
+	font:12px arial;
+	font-weight:bold;
+	color:#FE8A13;
+}
+#exist_result{
+	display:none;
+	clear:both;
+	font:12px arial;
+	font-weight:bold;
+	color:#FE8A13;
+}
+#userListPOD
+{
+	display:none;
+	background-color:#FFFFFF;
+	position:fixed;
+	left:30%;
+	top:10%;
+	display:none;
+	z-index:300;
+	padding:15px;
+	line-height:20px;
+	width:40%;
+	border:1px solid #CCCCCC;
+	font:12px arial;
+	
+}
+#userListPOD #close_list{
+	float:right;
+}
+#userListPOD .user_list{
+	clear:both;
+	margin:3px 0px;
+	overflow:hidden;
+}
+#userListPOD .user_pic{
+	float:left;
+}
+#userListPOD .user_details{
+	float:left;
+	padding:3px 10px;
+}
+#userListPOD #selectUser{
+	float:right;
+}
+#userListPOD #user_list_content{
+
+}
+#userListPOD a.skip_step,#userListView a.skip_step:visited{
+	color:#FE8A13;
+	text-decoration:none;
+	
+}
+#userListPOD a.skip_step:hover{
+	color:#FE8A13;
+	text-decoration:underline;
+}
+#userExistPOD
+{
+	display:none;
+	background-color:#FFFFFF;
+	position:fixed;
+	left:30%;
+	top:10%;
+	display:none;
+	z-index:300;
+	padding:15px;
+	line-height:20px;
+	width:40%;
+	border:4px solid #FF9900;
+		font:14px arial;
+		line-height:18px;
+	
+	
+}
+#userExistPOD #close_list{
+	float:right;
+}
+#userExistPOD a:link,#userExistPOD a:visited,#userExistPOD a:active{
+font-family:Arial; font-size:14px; color:#FF7C00; text-decoration:none; font-weight:normal;font-weight:bold;
+}	
+#userExistPOD a:hover{font-family:Arial; font-size:14px; color:#FF7C00; text-decoration:underline; font-weight:bold;}

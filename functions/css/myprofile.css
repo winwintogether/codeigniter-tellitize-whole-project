@@ -1,0 +1,210 @@
+#myprofile{
+	margin:0 auto;
+	width:100%;
+}
+#myprofile #right-main ul li{
+	clear:left;
+	padding:5px;
+	list-style:none;
+}
+#myprofile ul li h1{
+	font:12px arial;
+	line-height:20px;
+	float:left;
+	width:30%;
+	text-transform:uppercase;
+	}
+#myprofile ul li h2{
+	font:12px arial;
+	line-height:20px;
+	float:left;
+	width:40%;
+}
+#mid_container #myprofile .myprofile{
+	clear:left;
+	padding-top:10px;
+}
+#mid_container #myprofile .myprofile .orang_left{
+	background:url("/images/corner-left-orange.jpg");
+	background-repeat:no-repeat;
+	width:10px;
+	height:29px;
+	float:left;
+}
+#mid_container #myprofile .myprofile .orang_rit{
+	background:url("/images/corner-right-orange.jpg");
+	background-repeat:no-repeat;
+	width:10px;
+	height:29px;
+	float:left;
+}
+#mid_container #myprofile .myprofile .orang_mid{
+	background:url("/images/orange-bg.jpg");
+	width:880px;
+	height:29px;
+	float:left;
+}
+#mid_container #myprofile .myprofile .orang_mid h4{
+	padding:0px;
+	margin:0px;
+	float:left; font-family:Arial; font-size:12px; font-weight:bold; color:#FFFFFF; text-transform:uppercase; padding:8px 0px 0px 8px;
+}
+#left-main{
+	float:left;
+	background:#EDEDED;
+	overflow:hidden;
+	width:220px;
+	margin-right:15px;
+	padding-bottom:50px;
+}
+#right-main{
+	float:right;
+	margin-right:120px;
+	
+}
+#right-main .input_txt{
+	background-color: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #B5B5B5;
+    float: left;
+	height:26px;
+	width:300px;
+}
+#right-main .input_ta{
+	 background-color: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #B5B5B5;
+    float: left;
+	width:300px;
+}
+#left-main	#user-photo{
+
+	width:186px;
+	height:211px;
+	margin:10px auto;
+	text-align:center;
+}
+#left-main	.upload_photo{
+	background:url("../../images/upload-photo.jpg");
+	width:102px;
+	height:21px;
+	margin:10px auto;
+	
+}
+#left-main	#upload_photo_view{
+	background:url("../../images/upload-photo.jpg");
+	width:102px;
+	height:21px;
+	margin:10px auto;
+	
+}
+.my-tags-main {
+    float: left;
+    height: auto;
+    padding-left: 25px;
+    width: 217px;
+}
+.my-tags-inner{width:191px; height:24px; float:left; background:url(/images/tags-bg.png) no-repeat left top;  margin-bottom:8px;}
+.btn-text{
+	margin-top:-1px;
+}
+.btn-text a:link{text-align:center; font-family:Arial; font-size:10px; color:#000; text-decoration:none; font-weight:bold; text-transform:uppercase; padding:0px 0px 0px 10px;}	
+.multiselect {
+    float: left;
+    height: auto;
+    width: 191px;
+}
+.multiselect-left {
+    float: left;
+    height: auto;
+    width: 158px;
+}
+.multiselect-right {
+    float: right;
+    height: auto;
+    width: 29px;
+}
+.tag-name {
+    float: left;
+    height: auto;
+    width: 170px;
+	font:12px arial;
+}
+.tag-name-main{width:191px; height:22px; float:left; background:url(/images/bg-countryname.jpg) repeat-x left top; border:1px solid #cacaca; -webkit-border-radius: 5px;
+-moz-border-radius:5px;
+border-radius: 5px;}
+.city-input{font-family:Arial; font-size:12px; font-weight:normal; color:#565656; background:none; border:0px none; padding-left:5px; padding-top:2px;}
+.close-btn{width:19px; height:auto; float:right; padding-top:4px;}
+#doneButton{
+	margin-left:120px;
+}
+li#signup{
+	margin-left:140px;
+}
+.signUp{
+	border:#CACACA 1px solid;
+	width:850px;
+	overflow:hidden;
+	margin-top:80px;
+	margin-left:30px;
+}
+.signUp #right-main {
+	margin-right:40px;
+}
+.signUp  #left-main {
+	margin-right:10px;
+}
+#profile-tabs{
+	width:90%;
+	margin:50px 0px;
+	overflow:hidden;
+}
+#profile_container{
+	border-top:1px solid #CCCCCC;
+	clear:both;
+}
+#left-main #userview-photo {
+    height: 211px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 186px;
+	text-align:center;
+}
+#preview{
+	 max-width: 186px;
+	 max-height: 211px;
+}
+#left-main #userview-photo img,#left-main #user-photo img{
+	 max-width: 186px;
+	 max-height: 211px
+}
+ul#invite_btns{
+	float:right;
+	margin-right:100px;
+}
+ul#invite_btns  li{
+	float:left;
+	margin-right:10px;
+}
+
+ul#invite_btns  li a ,ul#invite_btns  li a:hover,ul#invite_btns  li a:visited{
+	float:left;
+	color:#666666;
+	text-decoration:none;
+	padding:5px;
+	background-color:#EDEDED;
+	text-transform:uppercase;
+	font:12px arial;
+	font-weight:normal;
+	
+}
+ul#invite_btns  li a:hover{
+	
+	background-color:#E2E2E2;
+	
+	
+}

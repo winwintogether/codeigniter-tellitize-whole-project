@@ -1,0 +1,184 @@
+ul.simplePagerNav{
+	clear:left;
+	float:right;
+	margin-right:5%;
+}
+li{
+	list-style:none;
+	overflow:hidden;
+	list-style-type:none;
+}
+.view_all{
+	width:93%;
+}
+.agreereply {
+	clear:left;
+}
+
+
+.postreply  {
+	clear:left;
+}
+#content { background-color:white; }
+ul.simplePagerNav li{
+    display:block;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: georgia;
+	font-size:14px;
+}
+
+ul.simplePagerNav li a{
+    color: #333;
+    text-decoration: none;
+}
+
+li.currentPage {
+	background: red;
+    background: #FF9500;	
+}
+
+ul.simplePagerNav li.currentPage a {
+	color: #fff;	
+}
+
+table.pageme {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}  
+
+table.pageme td {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+#delete-post{
+	float:right;display:none;
+	cursor:pointer;
+}
+.email_post
+{
+		background-color:#FFFFFF;
+		position:fixed;
+		left:26%;
+		top:10%;
+		display:none;
+		z-index:300;
+		line-height:20px;
+		width:53%;
+		border:4px solid #FF9900;
+		font:14px arial;
+		line-height:18px;
+}
+.email_post .pop_up_bg{
+	width:100%; height:auto; float:left; background-color:#ffffff; background:url(../../images/popup-logo.jpg) no-repeat left top;
+	min-height:180px;
+	
+}
+.email_post #email_contents{
+	width:70%;
+	margin-left:15%;
+}
+.email_post #email_contents ul{
+	padding:5px;
+	margin:0px;
+	font:14px arial;
+	clear:both;
+
+}
+.email_post #email_contents ul li{
+	float:left;
+	line-height:20px;
+}
+.email_post #email_contents ul li#email_rit{
+	width:60%;
+	max-height:250px;
+	
+}
+.email_post #email_contents ul li#email_left{
+	width:40%;
+	
+}
+.email_post #email_contents #sent_btn{
+	background:url(../../images/send-btn.png) no-repeat ;
+	width:72px;
+	height:26px;
+	float:right;
+	margin-right:208px;
+	margin-bottom:10px;
+	margin-top:5px;
+}
+#email-btns .orang_mid_anonymous{
+	background:url("../../images/anonymously-button.jpg");
+	height:24px;
+	float:left;
+	float:left;
+	cursor:pointer;
+	width:191px;
+	margin-top:10px;
+}
+#email-btns .orang_mid_email{
+	background:url("../../images/email-yourself.jpg");
+	height:24px;
+	float:left;
+	width:191px;
+	color:#FFFFFF;
+	font:12px arial;
+	font-weight:bold;
+	float:left;
+	cursor:pointer;
+	margin-top:10px;
+}
+
+.respond_to_author
+{
+		background-color:#FFFFFF;
+		position:fixed;
+		left:26%;
+		top:10%;
+		display:none;
+		z-index:300;
+		line-height:20px;
+		width:53%;
+		border:4px solid #FF9900;
+		font:14px arial;
+		line-height:18px;
+}
+.respond_to_author .pop_up_bg{
+	width:100%; height:auto; float:left; background-color:#ffffff; background:url(../../images/popup-logo.jpg) no-repeat left top;
+	min-height:160px;
+	
+}
+.respond_to_author #grant_div{
+	width:70%;
+	margin-left:15%;
+}
+.respond_to_author #grant_div ul{
+	padding:5px;
+	margin:0px;
+	font:14px arial;
+	clear:both;
+
+}
+.respond_to_author #grant_div ul li{
+	float:left;
+	line-height:20px;
+}
+.respond_to_author #grant_div ul li#email_rit{
+	width:40%;
+	max-height:150px;
+	
+}
+.respond_to_author #grant_div ul li#email_left{
+	width:40%;
+	
+}
+.respond_to_author #grant_div #sent_btn{
+	background:url(../../images/send-btn.png) no-repeat ;
+	width:72px;
+	height:26px;
+	float:right;
+	margin-right:208px;
+	margin-bottom:10px;
+	margin-top:5px;
+}
